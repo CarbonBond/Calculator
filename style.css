@@ -1,0 +1,96 @@
+html {
+    width: auto;
+    margin:0;
+    padding:0;
+}
+
+body {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: slategray;
+}
+
+.calculator {
+    box-sizing: border-box;
+    width: 35vw;
+    min-width: 450px;
+    height: 90vh;
+    box-shadow: 0 0 10px 2px black;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color: rgb(68, 68, 68)
+}
+
+.screenArea{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    background-color: hsl(0, 0%, 74%);
+}
+
+.equationArea{
+    text-align: left;
+    flex:1;
+    flex-grow: 2;
+    margin: 10px 10px 0px 10px;
+}
+.evalArea{
+    text-align: right;
+    flex:1;
+    margin: 0px 10px 10px 10px;
+
+}
+
+.buttonArea{
+    display:grid;
+    grid:
+    'clear clear back equil'
+    'seven eight nine plus'
+    'four five six minus'
+    'one two three multi'
+    'zero dot dot divide';
+    grid-template: minmax(0, 1fr);
+    row-gap: 3px;
+    column-gap: 3px;
+    flex: 1;
+    flex-grow: 2;
+    margin: 4px;
+}
+
+button {
+    box-sizing: border-box;
+    padding: 0px;
+    font-size: 40px;
+    color: hsl(0, 0%, 81%);
+    background-color: rgb(14, 14, 14);
+    border:none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.buttonClick {
+    background-color: rgb(109, 109, 109);
+    color: hsl(220, 44%, 15%);
+}
+
+@media only screen and (max-width: 600px) {
+    .calculator{
+        width: 100%;
+        height: 100vh;
+        padding:0px;
+    }
+}
+@media only screen and (max-height: 600px) {
+    .calculator{
+        height: 100%;
+        padding:0px;
+    }
+}
